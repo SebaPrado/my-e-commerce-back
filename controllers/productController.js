@@ -5,6 +5,10 @@ const Category = require("../models/Category");
 const fs = require("fs");
 const path = require("path");
 const formidable = require("formidable");
+const { log } = require("console");
+
+console.log("El valor de __dirname es:", __dirname)
+
 
 /// ↓ *** SUPABASE SETTINGS | UNCOMMENT ONLY FOR DEPLOYMENT ↓ *** ///
 
@@ -155,6 +159,7 @@ async function destroy(req, res) {
 }
 
 module.exports = {
+
   index,
   show,
   store,
