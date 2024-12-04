@@ -5,10 +5,6 @@ const Category = require("../models/Category");
 const fs = require("fs");
 const path = require("path");
 const formidable = require("formidable");
-const { log } = require("console");
-
-console.log("El valor de __dirname es:", __dirname)
-
 
 /// ↓ *** SUPABASE SETTINGS | UNCOMMENT ONLY FOR DEPLOYMENT ↓ *** ///
 
@@ -59,23 +55,10 @@ async function store(req, res) {
     }
 
     try {
-      // Renombrar la imagen antes de guardarla
-      const oldPath = files.image.filepath;
-      const newFileName = `${files.image.originalFilename}`; // Cambia el nombre aquí
-      const newPath = path.join(__dirname, "../public/img/products", newFileName);
-      
-      // Mover y renombrar el archivo
-      fs.rename(oldPath, newPath, (err) => {
-        if (err) {
-          console.log(err);
-          return res.json({ msg: "Error al renombrar la imagen.", constraint: true });
-        }
-      });
-
       const product = await Product.create({
         name: fields.name,
         tracklist: fields.tracklist,
-        image: newFileName, // Usar el nuevo nombre aquí
+        image: files.image.newFilename,
         price: fields.price,
         stock: fields.stock,
         artistId: fields.artistId,
@@ -115,20 +98,6 @@ async function update(req, res) {
   form.parse(req, async (err, fields, files) => {
     if (files.image.size === 0) {
       files.image.newFilename = product.image;
-    } else {
-      // Renombrar la imagen antes de guardarla
-      const oldPath = files.image.filepath;
-      const newFileName = `${Date.now()}_${files.image.originalFilename}`; // Cambia el nombre aquí
-      const newPath = path.join(__dirname, "../public/img/products", newFileName);
-      
-      // Mover y renombrar el archivo
-      fs.rename(oldPath, newPath, (err) => {
-        if (err) {
-          console.log(err);
-          return res.json({ msg: "Error al renombrar la imagen.", constraint: true });
-        }
-      });
-      files.image.newFilename = newFileName; // Usar el nuevo nombre aquí
     }
 
     if (!fields.hasOwnProperty("tracklist")) {
@@ -186,7 +155,6 @@ async function destroy(req, res) {
 }
 
 module.exports = {
-
   index,
   show,
   store,
