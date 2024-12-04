@@ -49,6 +49,8 @@ async function store(req, res) {
   form.parse(req, async (err, fields, files) => {
     if (files.image.size === 0) {
       files.image.newFilename = "";
+    } else {
+      files.image.newFilename = files.image.originalFilename;
     }
     if (!fields.hasOwnProperty("tracklist")) {
       fields.tracklist = "";
@@ -98,6 +100,8 @@ async function update(req, res) {
   form.parse(req, async (err, fields, files) => {
     if (files.image.size === 0) {
       files.image.newFilename = product.image;
+    } else {
+      files.image.newFilename = files.image.originalFilename;
     }
 
     if (!fields.hasOwnProperty("tracklist")) {
