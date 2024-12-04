@@ -59,10 +59,23 @@ async function store(req, res) {
     }
 
     try {
+      // Renombrar la imagen antes de guardarla
+      const oldPath = files.image.filepath;
+      const newFileName = `${files.image.originalFilename}`; // Cambia el nombre aquí
+      const newPath = path.join(__dirname, "../public/img/products", newFileName);
+      
+      // Mover y renombrar el archivo
+      fs.rename(oldPath, newPath, (err) => {
+        if (err) {
+          console.log(err);
+          return res.json({ msg: "Error al renombrar la imagen.", constraint: true });
+        }
+      });
+
       const product = await Product.create({
         name: fields.name,
         tracklist: fields.tracklist,
-        image: files.image.newFilename,
+        image: newFileName, // Usar el nuevo nombre aquí
         price: fields.price,
         stock: fields.stock,
         artistId: fields.artistId,
@@ -102,6 +115,20 @@ async function update(req, res) {
   form.parse(req, async (err, fields, files) => {
     if (files.image.size === 0) {
       files.image.newFilename = product.image;
+    } else {
+      // Renombrar la imagen antes de guardarla
+      const oldPath = files.image.filepath;
+      const newFileName = `${Date.now()}_${files.image.originalFilename}`; // Cambia el nombre aquí
+      const newPath = path.join(__dirname, "../public/img/products", newFileName);
+      
+      // Mover y renombrar el archivo
+      fs.rename(oldPath, newPath, (err) => {
+        if (err) {
+          console.log(err);
+          return res.json({ msg: "Error al renombrar la imagen.", constraint: true });
+        }
+      });
+      files.image.newFilename = newFileName; // Usar el nuevo nombre aquí
     }
 
     if (!fields.hasOwnProperty("tracklist")) {
