@@ -6,35 +6,31 @@ module.exports = async () => {
 
   categories.push(
     {
-      name: "Hardcore", //1
-      image: "hardcore-1.webp",
-    },
-    {
-      name: "Post-hardcore", //2
+      name: "Post-hardcore", //1
       image: "post-hardcore.jpg",
     },
     {
-      name: "Alternative Rock", //3
+      name: "Alternative Rock", //2
       image: "alternative-rock-1.webp",
     },
     {
-      name: "Metalcore", // 4
+      name: "Metalcore", // 3
       image: "metalcore.webp",
     },
     {
-      name: "Pop-punk", // 5
+      name: "Pop-punk", // 4
       image: "pop-punk-1.webp",
     },
     {
-      name: "jazz", // 6
+      name: "jazz", // 5
       image: "jazz.jpg",
     },
     {
-      name: "Folk Music", // 7
+      name: "Folk Music", // 6
       image: "folk.jpg",
     },
     {
-      name: "Indi", // 8
+      name: "Indi", // 7
       image: "indi.jpg",
     },
   );

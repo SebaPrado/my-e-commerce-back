@@ -23,9 +23,9 @@ module.exports = async () => {
       image: "the-fall-of-troy-1.webp",
       price: 25,
       stock: 10,
-      featured: false,
+      featured: true,
       artistId: 1,
-      categoryId: 2,
+      categoryId: 1,
     },
     {
       name: "Doppelganger",
@@ -45,7 +45,7 @@ module.exports = async () => {
       image: "the-fall-of-troy-2.webp",
       price: 25,
       stock: 10,
-      featured: false,
+      featured: true,
       artistId: 1,
       categoryId: 2,
     },
@@ -70,7 +70,7 @@ module.exports = async () => {
       stock: 10,
       featured: true,
       artistId: 2,
-      categoryId: 2,
+      categoryId: 3,
     },
     {
       name: "Mental Knife",
@@ -90,9 +90,9 @@ module.exports = async () => {
       image: "hail-the-sun-2.webp",
       price: 25,
       stock: 10,
-      featured: false,
+      featured: true,
       artistId: 2,
-      categoryId: 2,
+      categoryId: 4,
     },
     {
       name: "New Age Filth",
@@ -113,7 +113,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 2,
-      categoryId: 2,
+      categoryId: 5,
     },
     {
       name: "The Rain Museum",
@@ -136,7 +136,7 @@ module.exports = async () => {
       stock: 10,
       featured: true,
       artistId: 3,
-      categoryId: 3,
+      categoryId: 6,
     },
     {
       name: "Dream to Make Believe",
@@ -158,7 +158,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 3,
-      categoryId: 3,
+      categoryId: 7,
     },
     {
       name: "Convinced",
@@ -166,7 +166,7 @@ module.exports = async () => {
       image: "anberlin-1.webp",
       price: 25,
       stock: 10,
-      featured: false,
+      featured: true,
       artistId: 4,
       categoryId: 3,
     },
@@ -185,7 +185,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 4,
-      categoryId: 3,
+      categoryId: 2,
     },
     {
       name: "Don't Wait Up",
@@ -227,7 +227,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 5,
-      categoryId: 1,
+      categoryId: 4,
     },
     {
       name: "Cold",
@@ -249,7 +249,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 6,
-      categoryId: 1,
+      categoryId: 5,
     },
     {
       name: "More Power. More Pain.",
@@ -274,7 +274,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 6,
-      categoryId: 1,
+      categoryId: 6,
     },
     {
       name: "The Weight and the Cost",
@@ -294,9 +294,9 @@ module.exports = async () => {
       image: "be-well-1.webp",
       price: 25,
       stock: 10,
-      featured: true,
+      featured: false,
       artistId: 7,
-      categoryId: 1,
+      categoryId: 7,
     },
     {
       name: "Deluge",
@@ -306,7 +306,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 8,
-      categoryId: 1,
+      categoryId: 7,
     },
     {
       name: "Empty Black",
@@ -327,7 +327,7 @@ module.exports = async () => {
       stock: 10,
       featured: true,
       artistId: 9,
-      categoryId: 2,
+      categoryId: 6,
     },
     {
       name: "Kodak",
@@ -348,7 +348,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 10,
-      categoryId: 3,
+      categoryId: 5,
     },
     {
       name: "Dena Mora",
@@ -370,7 +370,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 11,
-      categoryId: 3,
+      categoryId: 4,
     },
     {
       name: "Texas in July",
@@ -392,7 +392,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 12,
-      categoryId: 4,
+      categoryId: 3,
     },
     {
       name: "Without Reason",
@@ -400,9 +400,9 @@ module.exports = async () => {
       image: "texas-in-july-2.webp",
       price: 25,
       stock: 10,
-      featured: false,
+      featured: true,
       artistId: 12,
-      categoryId: 4,
+      categoryId: 2,
     },
     {
       name: "Bloodwork",
@@ -424,7 +424,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 12,
-      categoryId: 4,
+      categoryId: 1,
     },
     {
       name: "To Plant a Seed",
@@ -445,7 +445,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 13,
-      categoryId: 4,
+      categoryId: 1,
     },
     {
       name: "A Flair for the Dramatic",
@@ -467,7 +467,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 14,
-      categoryId: 5,
+      categoryId: 2,
     },
     {
       name: "Entertainment",
@@ -488,7 +488,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 15,
-      categoryId: 5,
+      categoryId: 3,
     },
     {
       name: "Double Dare",
@@ -512,7 +512,7 @@ module.exports = async () => {
       stock: 10,
       featured: false,
       artistId: 15,
-      categoryId: 5,
+      categoryId: 4,
     },
   );
 
