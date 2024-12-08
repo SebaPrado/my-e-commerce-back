@@ -11,7 +11,7 @@ module.exports = async () => {
     },
     {
       name: "Post-hardcore", //2
-      image: "post-hardcore-1.webp",
+      image: "post-hardcore.jpg",
     },
     {
       name: "Alternative Rock", //3
@@ -19,11 +19,23 @@ module.exports = async () => {
     },
     {
       name: "Metalcore", // 4
-      image: "metalcore-1.webp",
+      image: "metalcore.webp",
     },
     {
       name: "Pop-punk", // 5
       image: "pop-punk-1.webp",
+    },
+    {
+      name: "jazz", // 6
+      image: "jazz.jpg",
+    },
+    {
+      name: "Folk Music", // 7
+      image: "folk.jpg",
+    },
+    {
+      name: "Indi", // 8
+      image: "indi.jpg",
     },
   );
 
