@@ -5,13 +5,13 @@ const fs = require("fs");
 const path = require("path");
 const formidable = require("formidable");
 
-/// ↓ *** SUPABASE SETTINGS | UNCOMMENT ONLY FOR DEPLOYMENT ↓ *** ///
+// / ↓ *** SUPABASE SETTINGS | UNCOMMENT ONLY FOR DEPLOYMENT ↓ *** ///
 
-// const { createClient } = require("@supabase/supabase-js");
+const { createClient } = require("@supabase/supabase-js");
 
-// const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
+const supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_KEY);
 
-/// ↑ *** SUPABASE SETTINGS | UNCOMMENT ONLY FOR DEPLOYMENT ↑ *** ///
+// / ↑ *** SUPABASE SETTINGS | UNCOMMENT ONLY FOR DEPLOYMENT ↑ *** ///
 
 const form = formidable({
   multiples: true,
