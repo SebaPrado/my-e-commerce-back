@@ -6,17 +6,16 @@ const routes = require("./routes");
 const APP_PORT = process.env.APP_PORT || 3001;
 const app = express();
 
+// const favicon = require("serve-favicon");
+// const path = require("path");
 const cors = require("cors");
-const favicon = require("serve-favicon");
-const path = require("path");
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+// app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 
 app.use(cors());
-
 
 routes(app);
 
