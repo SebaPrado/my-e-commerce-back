@@ -4,10 +4,11 @@ const methodOverride = require("method-override");
 const express = require("express");
 const routes = require("./routes");
 const APP_PORT = process.env.APP_PORT || 3001;
-const app = express();
 
 const favicon = require("serve-favicon");
 const path = require("path");
+const app = express();
+
 const cors = require("cors");
 
 app.use(express.static("public"));
