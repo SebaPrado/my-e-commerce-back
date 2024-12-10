@@ -14,7 +14,7 @@ app.use(
   cors({
     origin: [
       "https://equalvisionshop.vercel.app",
-      "https://equalvisiondashboard.vercel.app"
+      "https://equalvisiondashboard.vercel.app",
     ],
     methods: ["GET", "POST", "PUT", "DELETE"],
     credentials: true,
