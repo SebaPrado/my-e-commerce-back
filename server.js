@@ -11,7 +11,7 @@ const app = express();
 
 const cors = require("cors");
 app.use(cors({
-  origin: 'https://my-e-commerce-front-z1ae.vercel.app', // Cambia esto al dominio de tu frontend
+  origin: 'https://equalvisionshop.vercel.app' || 'http://localhost:5173', // Cambia esto al dominio de tu frontend
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true // Si necesitas enviar cookies o headers de autenticación
 }));
