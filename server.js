@@ -12,17 +12,13 @@ const app = express();
 const cors = require("cors");
 app.use(
   cors({
-    origin: "https://equalvisionshop.vercel.app" || "https://equalvisiondashboard.vercel.app", // Cambia esto al dominio de tu frontend
+    origin: [
+      "https://equalvisionshop.vercel.app",
+      "https://equalvisiondashboard.vercel.app"
+    ],
     methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // Si necesitas enviar cookies o headers de autenticación
-  }),
-);
-app.use(
-  cors({
-    origin: "https://equalvisiondashboard.vercel.app", // Cambia esto al dominio de tu frontend
-    methods: ["GET", "POST", "PUT", "DELETE"],
-    credentials: true, // Si necesitas enviar cookies o headers de autenticación
-  }),
+    credentials: true,
+  })
 );
 
 app.use(express.static("public"));
