@@ -10,16 +10,18 @@ const path = require("path");
 const app = express();
 
 const cors = require("cors");
-app.use(cors({
-  origin: 'https://equalvisionshop.vercel.app' || 'http://localhost:5173', // Cambia esto al dominio de tu frontend
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true // Si necesitas enviar cookies o headers de autenticación
-}));
+app.use(
+  cors({
+    origin: "https://equalvisionshop.vercel.app" || "https://equalvisiondashboard.vercel.app", // Cambia esto al dominio de tu frontend
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // Si necesitas enviar cookies o headers de autenticación
+  }),
+);
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 app.use(cors());
 
@@ -29,4 +31,3 @@ app.listen(APP_PORT, () => {
   console.log(`\n[Express] Servidor corriendo en el puerto ${APP_PORT}.`);
   console.log(`[Express] Ingresar a http://localhost:${APP_PORT}.\n`);
 });
-
