@@ -17,6 +17,13 @@ app.use(
     credentials: true, // Si necesitas enviar cookies o headers de autenticación
   }),
 );
+app.use(
+  cors({
+    origin: "https://equalvisiondashboard.vercel.app", // Cambia esto al dominio de tu frontend
+    methods: ["GET", "POST", "PUT", "DELETE"],
+    credentials: true, // Si necesitas enviar cookies o headers de autenticación
+  }),
+);
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
