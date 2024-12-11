@@ -16,7 +16,7 @@ app.use(
       "https://equalvisionshop.vercel.app",
       "https://equalvisiondashboard.vercel.app",
     ],
-    methods: ["GET", "POST", "PUT", "DELETE"],
+    methods: ["GET", "POST", "PATCH", "PUT", "DELETE"],
     credentials: true,
   })
 );
